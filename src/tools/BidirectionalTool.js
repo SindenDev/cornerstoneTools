@@ -29,8 +29,10 @@ export default class BidirectionalTool extends BaseAnnotationTool {
     this.pointNearTool = pointNearTool.bind(this);
     this.renderToolData = renderToolData.bind(this);
     this.addNewMeasurement = addNewMeasurement.bind(this);
-    this.mouseMoveCallback = _moveCallback.bind(this);
+    this._moveCallback = _moveCallback.bind(this);
+
     this.preMouseDownCallback = _downCallback.bind(this);
+    this.preTouchStartCallback = _downCallback.bind(this);
   }
 
 }
